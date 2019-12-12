@@ -46,7 +46,7 @@ object Version {
     const val gson = "2.8.5"
 
     //jetpack
-    const val archLifecycle = "2.0.0"
+    const val archLifecycle = "2.1.0"
     const val recyclerView = "1.0.0"
 
     //di
@@ -75,6 +75,8 @@ object Android {
 }
 
 object Jetpack {
+    val lifecycleLivedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Version.archLifecycle}"
+    val lifecycleViewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.archLifecycle}"
     val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Version.archLifecycle}"
     val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Version.archLifecycle}"
     val recyclerView = "androidx.recyclerview:recyclerview:${Version.recyclerView}"

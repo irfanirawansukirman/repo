@@ -1,0 +1,34 @@
+apply from: "$rootDir/common.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    //common module
+    implementation project(Modules.abstraction)
+    implementation project(Modules.network)
+    implementation project(Modules.data)
+
+    //lifecycle
+    implementation Jetpack.lifecycleLivedataKtx
+    implementation Jetpack.lifecycleViewmodelKtx
+    implementation Jetpack.lifecycle
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    kapt Jetpack.lifecycleCompiler
+
+    //network
+    implementation Retrofit.retrofit
+    implementation Retrofit.gsonConverter
+    implementation Retrofit.coroutinesAdapter
+    implementation Retrofit.okHttpLogging
+
+    //coroutines
+    implementation Coroutines.core
+    implementation Coroutines.android
+
+    //ui
+    implementation Android.appCompat
+    implementation Android.ktx
+    implementation Android.constraintLayout
+    implementation Jetpack.recyclerView
+}

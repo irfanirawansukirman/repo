@@ -1,0 +1,30 @@
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    //common module
+    implementation project(Modules.abstraction)
+    implementation project(Modules.network)
+    implementation project(Modules.data)
+
+    //lifecycle
+    implementation Jetpack.lifecycleLivedataKtx
+    implementation Jetpack.lifecycleViewmodelKtx
+    implementation Jetpack.lifecycle
+    kapt Jetpack.lifecycleCompiler
+
+    //network
+    implementation Retrofit.retrofit
+    implementation Retrofit.gsonConverter
+    implementation Retrofit.coroutinesAdapter
+    implementation Retrofit.okHttpLogging
+
+    //coroutines
+    implementation Coroutines.core
+    implementation Coroutines.android
+
+    //ui
+    implementation Android.appCompat
+    implementation Android.ktx
+    implementation Android.constraintLayout
+    implementation Jetpack.recyclerView
+}
